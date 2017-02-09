@@ -185,9 +185,9 @@ DB = MySQLdb.connect(MYSQL_CONF.db_address,
 CURSOR = DB.cursor()
 
 #log set up
-CREATE_LOG = "CREATE TABLE IF NOT EXISTS log \
-                (Tstamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, \
-                record text)"
+CREATE_LOG = """CREATE TABLE IF NOT EXISTS log
+                (Tstamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+                record text)"""
 sql_insert(CREATE_LOG)
 
 #insert script started into db
